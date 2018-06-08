@@ -36,7 +36,17 @@ public class TestMultiPlayer {
 		int seed = new Random().nextInt();
 
 		// Game and level to play
-		int gameIdx = 0;
+		int gameIdx = 1;  // Akka Arrh
+//		int gameIdx = 2;  // Aliens
+//		int gameIdx = 17; // Fire Truck
+//		int gameIdx = 32; // Romeo and Juliet
+//		int gameIdx = 34; // Sokoban
+//		int gameIdx = 37; // Team Escape
+//		int gameIdx = 38; // The Bridge
+//		int gameIdx = 39; // Tower Defense
+//		int gameIdx = 42; // Treasure Map
+//		int gameIdx = 49; // Wheel Me
+
 		int levelIdx = 0; // level names from 0 to 4 (game_lvlN.txt).
 		String gameName = games[gameIdx][1];
 		String game = games[gameIdx][0];
@@ -48,13 +58,13 @@ public class TestMultiPlayer {
 						// executed. null if not to save.
 
 		// 1. This starts a game, in a level, played by two humans.
-		ArcadeMachine.playOneGameMulti(game, level1, recordActionsFile, seed);
+//		ArcadeMachine.playOneGameMulti(game, level1, recordActionsFile, seed);
 
 
 		// 2. This plays a game in a level by the tracks. If one of the
 		// players is human, change the playerID passed
 		// to the runOneGame method to be that of the human player (0 or 1).
-//		ArcadeMachine.runOneGame(game, level1, visuals, controllers, recordActionsFile, seed, 0);
+		ArcadeMachine.runOneGame(game, level1, visuals, controllers, recordActionsFile, seed, 0);
 
 		// 3. This replays a game from an action file previously recorded
 //		 String readActionsFile = recordActionsFile;
